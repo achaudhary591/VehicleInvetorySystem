@@ -1,4 +1,4 @@
-insert into users ( id, email , name) values ('45e2bf23-153b-486a-bf56-cd79c97c2676', 'hold@madik.com', 'Aneed Seamen')
+insert into users ( id, email , name) values ('45e2bf23-153b-486a-bf56-cd79c97c2676', 'abc@gmail.com', 'ABC XYZ')
 
 
 INSERT INTO VEHICLES( ID , NAME ) VALUES ('1036b2d3-62e6-4f6f-86df-b0b891f2ec82', 'CAR1')
