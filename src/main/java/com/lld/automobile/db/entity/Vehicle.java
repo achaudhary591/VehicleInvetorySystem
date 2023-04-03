@@ -9,9 +9,11 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import lombok.Data;
+import lombok.Setter;
 
 @Data
 @Entity
+@Setter
 @Table(name = "vehicles")
 public class Vehicle {
 
@@ -29,11 +31,7 @@ public class Vehicle {
 	)
 	private VehicleStation vehicleStation;
 
-	public Vehicle(String id, String name) {
-		super();
-		this.id = id;
-		this.name = name;
+	public Vehicle() {
 	}
-	
-	
+
 }

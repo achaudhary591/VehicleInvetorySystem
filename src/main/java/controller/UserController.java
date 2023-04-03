@@ -2,7 +2,6 @@ package controller;
 
 import com.lld.automobile.db.entity.User;
 import com.lld.automobile.db.repository.UserRepository;
-import com.lld.automobile.db.repository.VehicleRepository;
 import com.lld.automobile.service.VehicleInventoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -11,8 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/")
-public class VehicleInventoryController {
+@RequestMapping("/user")
+public class UserController {
 
     @Autowired
     private VehicleInventoryService vehicleInventoryService;
@@ -24,5 +23,7 @@ public class VehicleInventoryController {
     public User createUser(@RequestBody User user){
         return userRepository.save(user);
     }
+
+
 
 }

@@ -17,7 +17,6 @@ import com.lld.automobile.db.repository.VehicleStationRepository;
 import com.lld.automobile.model.UserDTO;
 import com.lld.automobile.model.VehicleDTO;
 import com.lld.automobile.model.VehicleIssueRequest;
-import com.lld.automobile.model.VehicleRequest;
 import com.lld.automobile.model.VehicleStationDTO;
 import com.lld.automobile.model.VehicleStationRequest;
 
@@ -67,11 +66,6 @@ public class VehicleInventoryService {
 				.vehicle(mapToVehicleDto(user.getUserVehicle())).build();
 	}
 
-	public VehicleDTO createVehicle(VehicleRequest vehicleRequest) {
-		Vehicle vehicle = new Vehicle(generateUUIDString(), vehicleRequest.name.get());
-		vehicleRepository.save(vehicle);
-		return VehicleDTO.builder().id(vehicle.getId()).name(vehicle.getName()).build();
-	}
 
 	public VehicleStationDTO createVehicleStation(VehicleStationRequest vehicleStationRequest) {
 		VehicleStation vehicleStation = VehicleStation.builder().id(generateUUIDString())
